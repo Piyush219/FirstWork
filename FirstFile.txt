@@ -1,0 +1,30 @@
+const ul = document.querySelector('.items');
+
+ul.firstElementChild.innerHTML = '<h1>Hello 1</h1>';
+ul.children[1].innerText = 'Hello 2';
+ul.lastElementChild.innerHTML= '<h1>Hello 3</h1>';
+
+const li = document.querySelector('.items')
+li.children[0].style.color = 'green';
+li.children[1].style.color = 'yellow';
+li.lastElementChild.style.color = 'red';
+
+const btn = document.querySelector('.btn');
+
+btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('#my-form').style.background = '#ccc'
+    console.log('click');
+} );
+
+btn.addEventListener('mouseover',(m) => {
+    //m.preventDefault();
+    document.querySelector('.items').lastElementChild.innerHTML = '<h1>HOVERED</h1>'
+});
+
+btn.addEventListener('mouseout',(o) => {
+    o.preventDefault();
+    document.querySelector('.items').firstElementChild.textContent = 'MouseOut'
+})
+
+//First DOM JS
